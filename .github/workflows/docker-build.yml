@@ -19,7 +19,6 @@ jobs:
       matrix:
         build:
           - {latest: "false", comfyui: "v0.3.18", python: "3.12", pytorch: "2.6.0", cuda: "12.4.1-base"}
-          - {latest: "false", comfyui: "v0.3.18", python: "3.12", pytorch: "2.6.0", cuda: "12.4.1-cudnn8-devel"}
     steps:
       -
         name: Free Space
