@@ -1,7 +1,7 @@
 # For build automation - Allows building from any ai-dock base image
 # Use a *cuda*base* image as default because pytorch brings the libs
 # 3.12-v2-cuda-12.4.1-base-22.04 
-ARG IMAGE_BASE="ghcr.io/ai-dock/python:3.12-v2-cuda-12.4.1-base-22.04"
+ARG IMAGE_BASE="ghcr.io/ai-dock/python:3.10-v2-cuda-12.4.1-base-22.04"
 # ARG IMAGE_BASE="ghcr.io/ai-dock/python:3.10-v2-cuda-12.4.1-base-22.04"
 
 FROM ${IMAGE_BASE}
