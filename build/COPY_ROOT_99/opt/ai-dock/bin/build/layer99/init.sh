@@ -39,7 +39,7 @@ CHECKPOINT_MODELS=(
 
     # Flux
     # Flux Acorn-Flux-v1.5-FP8.safetensors
-    "https://civitai.com/api/download/models/1374658"     
+    # "https://civitai.com/api/download/models/1374658"     
     
     # "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/blob/main/flux1-redux-dev.safetensors"
     # "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/resolve/main/flux1-fill-dev.safetensors"
@@ -63,12 +63,12 @@ LORA_MODELS=(
     # "https://civitai.com/api/download/models/190920"     # Real Pussy - Lily v5.safetensors"
 
     # SDXL
-    "https://civitai.com/api/download/models/224006"         # conical nipples XL.safetensors"
-    "https://civitai.com/api/download/models/298576"          
-    "https://civitai.com/api/download/models/196559"          # puffy nipples SDXL
-    "https://civitai.com/api/download/models/871108"          # Real
-    "https://civitai.com/api/download/models/802232"          # Real Pussy - Cameltoe
-    "https://civitai.com/api/download/models/339112"          # Better Faces LoRA
+    # "https://civitai.com/api/download/models/224006"         # conical nipples XL.safetensors"
+    # "https://civitai.com/api/download/models/298576"          
+    # "https://civitai.com/api/download/models/196559"          # puffy nipples SDXL
+    # "https://civitai.com/api/download/models/871108"          # Real
+    # "https://civitai.com/api/download/models/802232"          # Real Pussy - Cameltoe
+    # "https://civitai.com/api/download/models/339112"          # Better Faces LoRA
 )
 
 VAE_MODELS=(
@@ -78,8 +78,8 @@ VAE_MODELS=(
 )
 
 ESRGAN_MODELS=(
-    "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
-    "https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth"
+    # "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
+    # "https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth"
     # "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
     # "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
     # "https://huggingface.co/gemasai/4x_NMKD-Superscale-SP_178000_G/resolve/main/4x_NMKD-Superscale-SP_178000_G.pth"
