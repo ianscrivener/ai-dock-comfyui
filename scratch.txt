@@ -1,14 +1,14 @@
 #!/bin/bash
 
+
 # Must exit and fail to build if any command fails
 set -eo pipefail
 umask 002
 
-# Use this layer to add nodes and models
-
 APT_PACKAGES=(
     "jq"
 )
+
 # Packages are installed after nodes so we can fix them...
 PIP_PACKAGES=(
     "opencv-python==4.7.0.72"
@@ -27,20 +27,17 @@ CHECKPOINT_MODELS=(
     # SDXL
     # Socamerge-TurboXL-1.2-Hybrid.safetensors"
     "https://civitai.com/api/download/models/274815"      
-
     # TurboVisionXL-v4.3.1-VAE.safetensors
     # "https://civitai.com/api/download/models/273102"    
 
     # realvisxl-v50
     # https://civitai.com/api/download/models/798204       
-    
     # realvisxl-v50 inpaint
     # https://civitai.com/api/download/models/967238       
 
     # Flux
     # Flux Acorn-Flux-v1.5-FP8.safetensors
     "https://civitai.com/api/download/models/1374658"     
-    
     # "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/blob/main/flux1-redux-dev.safetensors"
     # "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/resolve/main/flux1-fill-dev.safetensors"
 
@@ -79,9 +76,9 @@ VAE_MODELS=(
 
 ESRGAN_MODELS=(
     "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
-    "https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth"
     # "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
     # "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
+    "https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth"
     # "https://huggingface.co/gemasai/4x_NMKD-Superscale-SP_178000_G/resolve/main/4x_NMKD-Superscale-SP_178000_G.pth"
 )
 
@@ -104,6 +101,46 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
 )
+
+
+
+# The init.sh script is a Bash script designed to set up a specific environment for building and running a project, likely related to AI or machine learning given the context of downloading models and nodes. Here's a breakdown of its key components:
+
+# Error Handling: The script uses set -eo pipefail to ensure that it exits immediately if any command fails, which is crucial for build scripts to avoid proceeding with an incomplete setup.
+
+# Package Management:
+# APT Packages: An array APT_PACKAGES is defined for any system packages that need to be installed via APT (Advanced Package Tool).
+# PIP Packages: An array PIP_PACKAGES specifies Python packages to be installed using pip.
+
+# Nodes and Models:
+# The script defines arrays for NODES, CHECKPOINT_MODELS, UNET_MODELS, LORA_MODELS, VAE_MODELS, ESRGAN_MODELS, and CONTROLNET_MODELS. These arrays contain URLs for repositories and model files that will be downloaded during the setup process.
+
+# Functions:
+
+    # build_extra_start():
+    # This function orchestrates the setup process, calling other functions to install packages, download nodes, and models.
+
+    # build_extra_get_nodes(): 
+    # This function checks if the specified nodes are already downloaded and updates them if they are. If not, it clones the repositories.
+
+    # build_extra_get_apt_packages() and build_extra_get_pip_packages(): 
+    # These functions handle the installation of APT and PIP packages, respectively.
+
+    # build_extra_get_models(): 
+    # This function downloads models from the specified URLs to designated directories.
+
+    # build_extra_download(): 
+    # A utility function to download files from a given URL to a specified path.
+
+# Execution: The script ends by calling build_extra_start, which initiates the entire setup process.
+
+# Permissions: The script sets a default file permission mask with umask 002, which allows group write permissions.
+
+# Final Command: The script calls fix-permissions.sh -o container at the end, which likely adjusts file permissions for the container environment.
+
+
+
+
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
