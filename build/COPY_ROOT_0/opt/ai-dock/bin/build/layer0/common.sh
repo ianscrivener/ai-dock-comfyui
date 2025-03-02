@@ -18,9 +18,11 @@ build_common_create_venv() {
     "$COMFYUI_VENV_PIP" install --no-cache-dir \
         ipykernel \
         ipywidgets
+    
     "$COMFYUI_VENV_PYTHON" -m ipykernel install \
         --name="comfyui" \
         --display-name="Python${PYTHON_VERSION} (comfyui)"
+
     # Add the default Jupyter kernel as an alias of comfyui
     "$COMFYUI_VENV_PYTHON" -m ipykernel install \
         --name="python3" \
@@ -31,6 +33,7 @@ build_common_create_venv() {
     "$API_VENV_PIP" install --no-cache-dir \
         ipykernel \
         ipywidgets
+    
     "$API_VENV_PYTHON" -m ipykernel install \
         --name="api-wrapper" \
         --display-name="Python${PYTHON_VERSION} (api-wrapper)"
