@@ -1,8 +1,7 @@
 # For build automation - Allows building from any ai-dock base image
 # Use a *cuda*base* image as default because pytorch brings the libs
 ARG IMAGE_BASE="ghcr.io/ai-dock/python:3.10-v2-cuda-12.1.1-base-22.04"
-ENV IMAGE_BASE=${IMAGE_BASE}
-
+# ENV IMAGE_BASE=${IMAGE_BASE}
 
 FROM ${IMAGE_BASE}
 
@@ -26,6 +25,7 @@ ARG PYTHON_VERSION="3.10"
 ENV PYTHON_VERSION=${PYTHON_VERSION}
 ARG PYTORCH_VERSION="2.4.0"
 ENV PYTORCH_VERSION="${PYTORCH_VERSION}"
+
 COPY --chown=0:1111 ./COPY_ROOT_0/ /
 
 ARG IMAGE_BASE
@@ -35,6 +35,7 @@ RUN echo "bust cache"
 # Install software
 ARG COMFYUI_BUILD_REF
 ENV COMFYUI_BUILD_REF=${COMFYUI_BUILD_REF}
+
 COPY --chown=0:1111 ./COPY_ROOT_1/ /
 RUN set -eo pipefail && /opt/ai-dock/bin/build/layer1/init.sh | tee -a /var/log/build.log
 
