@@ -18,7 +18,7 @@ jobs:
         build:
           - {latest: "false", comfyui: "v0.3.18", python: "3.12", pytorch: "2.6.0", cuda: "12.4.1-base"}
    steps:
-      -name: Free Space
+      - name: Free Space
         run: |
           df -h
           sudo rm -rf /usr/share/dotnet
@@ -29,34 +29,34 @@ jobs:
           sudo rm -rf "$AGENT_TOOLSDIRECTORY"
           df -h
 
-      -name: Env Setter
+      - name: Env Setter
         run: |
           REPO=${GITHUB_REPOSITORY,,}
           echo "REPO_NAMESPACE=${REPO%%/*}" >> ${GITHUB_ENV}
           echo "REPO_NAME=${REPO#*/}" >> ${GITHUB_ENV}
 
-      -name: Checkout
+      - name: Checkout
         uses: actions/checkout@v3
 
-      -name: Permissions fixes
+      - name: Permissions fixes
         run: |
           target="${HOME}/work/${{ env.REPO_NAME }}/${{ env.REPO_NAME }}/build/COPY*"
           chmod -R ug+rwX ${target}
 
-      -name: Login to DockerHub
+      - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
           username: ${{ vars.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      -name: Login to GitHub Container Registry
+      - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          
-      -name: Set tags
+
+      - name: Set tags
         run: |
           img_path_ghcr="ghcr.io/${{ env.REPO_NAMESPACE }}/${{ env.REPO_NAME }}"
           img_path_dhub="${{ vars.DOCKERHUB_USER }}/${{ env.REPO_NAME }}-cuda"
@@ -91,8 +91,8 @@ jobs:
           fi
 
           echo "TAGS=${TAGS}" >> ${GITHUB_ENV}
-      -
-        name: Build and push
+      
+      - name: Build and push
         uses: docker/build-push-action@v4
         with:
           context: build
