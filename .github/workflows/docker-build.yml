@@ -91,13 +91,14 @@ jobs:
                 # Docker.io Tags
                 TAGS="${img_path_dhub}:${COMFYUI_BUILD_REF}, ${img_path_dhub}:latest"
             else
-                TAGS="${img_path_ghcr}:${base_tag}-${COMFYUI_BUILD_REF}, ${img_path_dhub}:${COMFYUI_BUILD_REF}"
+                # TAGS="${img_path_ghcr}:${base_tag}-${COMFYUI_BUILD_REF}, ${img_path_dhub}:${COMFYUI_BUILD_REF}"
+                TAGS="${img_path_dhub}:${COMFYUI_BUILD_REF}, ${img_path_dhub}:latest"
             fi
 
             # Tag a devel build
-            if [[ ${{ matrix.build.cuda }} = *-devel ]]; then
-                TAGS="${TAGS}, ${img_path_dhub}:${COMFYUI_BUILD_REF}-devel"
-            fi
+            # if [[ ${{ matrix.build.cuda }} = *-devel ]]; then
+            #     TAGS="${TAGS}, ${img_path_dhub}:${COMFYUI_BUILD_REF}-devel"
+            # fi
 
           echo "TAGS=${TAGS}" >> ${GITHUB_ENV}
 
