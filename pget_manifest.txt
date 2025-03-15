@@ -15,6 +15,14 @@ https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl.s
 https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors /workspace/ComfyUI/models/ipadapter/ip-adapter_sdxl_vit-h.safetensors
 https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl.bin /workspace/ComfyUI/models/ipadapter/ip-adapter-faceid_sdxl.bin
 https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl.bin /workspace/ComfyUI/models/ipadapter/ip-adapter-faceid-plusv2_sdxl.bin
+https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-portrait_sdxl_unnorm.bin /workspace/ComfyUI/models/ipadapter/ip-adapter-faceid-portrait_sdxl_unnorm.bin
+https://huggingface.co/ostris/ip-composition-adapter/resolve/main/ip_plus_composition_sdxl.safetensors /workspace/ComfyUI/models/ipadapter/ip_plus_composition_sdxl.safetensors
+https://huggingface.co/Kwai-Kolors/Kolors-IP-Adapter-Plus/resolve/main/ip_adapter_plus_general.bin /workspace/ComfyUI/models/ipadapter/ip_adapter_plus_general.bin 
+
+# IP Adapter Loras
+https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors /ComfyUI/models/loras/ip-adapter-faceid_sdxl_lora.safetensors
+https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors /ComfyUI/models/loras/ip-adapter-faceid-plusv2_sdxl_lora.safetensors
+
 
 # Upscalers
 https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth /workspace/ComfyUI/models/upscale_models/4x-UltraSharp.pth
