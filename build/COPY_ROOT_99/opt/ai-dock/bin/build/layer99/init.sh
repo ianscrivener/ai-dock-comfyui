@@ -17,6 +17,7 @@ PIP_PACKAGES=(
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/shingo1228/ComfyUI-SDXL-EmptyLatentImage"
 )
 
 CHECKPOINT_MODELS=(

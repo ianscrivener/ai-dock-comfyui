@@ -1,3 +1,65 @@
+#############################
+# Style Models
+# mkdir -p /workspace/Comfyui/models/style_models
+# cd /workspace/Comfyui/models/style_models
+# wget -nc https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/blob/main/flux1-redux-dev.safetensors
+
+#############################
+# SigClipvision
+mkdir -p /workspace/ComfyUI/models/clip_vision
+wget https://huggingface.co/Comfy-Org/sigclip_vision_384/blob/main/sigclip_vision_patch14_384.safetensors
+
+#############################
+# clip
+mkdir -p /workspace/ComfyUI/models/clip
+cd /workspace/ComfyUI/models/clip
+wget -O CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors
+
+#############################
+# IP Adapter & IP Adapter Plus 
+mkdir -p /workspace/ComfyUI/models/ipadapter
+cd /workspace/ComfyUI/models/ipadapter
+wget https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus-face_sdxl_vit-h.safetensors
+wget https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus_sdxl_vit-h.safetensors
+wget https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors
+wget https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl.safetensors
+wget https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors
+wget https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl.bin
+wget https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl.bin
+
+
+#############################
+# Upscalers
+cd /workspace/ComfyUI/models/upscale_models
+wget -nc https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth
+wget -nc https://huggingface.co/gemasai/4x_NMKD-Superscale-SP_178000_G/resolve/main/4x_NMKD-Superscale-SP_178000_G.pth
+
+#############################
+# Custom nodes
+cd /workspace/ComfyUI/custom_nodes 
+git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus
+git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts
+git clone https://github.com/rgthree/rgthree-comfy
+git clone https://github.com/jags111/efficiency-nodes-comfyui
+git clone https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes
+git clone https://github.com/cubiq/ComfyUI_essentials
+git clone https://github.com/ltdrdata/ComfyUI-Inspire-Pack
+git clone https://github.com/cubiq/ComfyUI_FaceAnalysis
+git clone https://github.com/mav-rik/facerestore_cf
+git clone https://github.com/ltdrdata/ComfyUI-Impact-Subpack
+git clone https://github.com/shingo1228/ComfyUI-SDXL-EmptyLatentImage
+git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack
+
+
+
+
+
+
+
+
+
+
+
 Ubuntu:         24.10
 Python:         3.12, 3.13.2
 Pytorch:        2.6.0, 
